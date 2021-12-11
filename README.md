@@ -1,2 +1,2 @@
 # MoGo-template
- Website based on the free template "Mogo" by freebiesbug.com
+ Website based on the free template "Mogo" by Laaqiq from freebiesbug.com
