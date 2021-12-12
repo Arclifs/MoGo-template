@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     max-width: 880px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .intro__title {
@@ -45,7 +46,6 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 150px;
     font-weight: 700;
     text-transform: uppercase;
-    text-align: center;
     line-height: 1;
 }
 
@@ -54,7 +54,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     width: 60px;
     height: 3px;
-    margin: 60px auto 0;
+    margin: 60px auto;
     background-color: #fff;
 }
 
@@ -63,7 +63,6 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Kaushan Script', cursive;
     font-size: 72px;
     color: #fff;
-    text-align: center;
 }
 
 /* Header */
@@ -123,6 +122,76 @@ h1, h2, h3, h4, h5, h6 {
     color: #fce38a;
 }
 
-.nav__link:hover:after {
+.nav__link:hover:after,
+.nav__link.active:after {
     opacity: 1;
+}
+
+.nav__link.active {
+    color: #fce38a;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+    border: 3px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background .1s linear, color .1s linear;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Slider */
+.slider {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider__item {
+    width: 23%;
+    padding: 20px 0;
+    position: relative;
+    border-top: 3px solid #fff;
+    opacity: .7;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.slider__item.active {
+    opacity: 1;
+}
+
+.slider__item.active:before {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    background-color: #f38181;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    z-index: 1;
+}
+
+.slider__num {
+    font-size: 24px;
+    font-weight: 700;
 }
